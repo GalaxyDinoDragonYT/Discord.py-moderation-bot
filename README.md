@@ -31,18 +31,18 @@ Emojis can be changed by going to https://emojipedia.org and copying an emoji.
 
 Help command can be changed if you add a command by adding a field or editing the current fields, here is some example code: 
 
-`@client.group(invoke_without_command=True)
+@client.group(invoke_without_command=True)
 async def help(ctx,):
   embed = discord.Embed(title = "Help", description = f"Do {prefix}help <command> for more information on the command.",color = ctx.author.color)
 
   embed.add_field(name = "Moderation", value = "`kick` , `ban` , `mute`")
   embed.add_field(name = "Misc and fun", value = "`snipe` , `dm` , `ping` , `poll` , `rules` , `help` , `YOUR COMMAND NAME`") 
 
-  await ctx.send(embed=embed)`
+  await ctx.send(embed=embed)
   
   If you edit the help command you need to add the following code:
   
-  `@help.command()
+  @help.command()
 async def COMMAND NAME(ctx):
 
   embed = discord.Embed(title = "**COMMAND NAME**", description = "Command description.", color = ctx.author.color)
@@ -51,6 +51,6 @@ async def COMMAND NAME(ctx):
 
   embed.add_field(name = "**Usage**", value = f"{prefix}COMMAND NAME")
 
-  await ctx.send(embed=embed)`
+  await ctx.send(embed=embed)
   
   If you need more help join our support server: https://discord.gg/Ada7RsHSRj
